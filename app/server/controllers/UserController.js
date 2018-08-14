@@ -645,7 +645,14 @@ UserController.admitUser = function(id, user, callback){
       }, {
         new: true
       },
-      callback);
+      (err, user) => {
+        if(err){
+          callback(err, user);
+        }
+        else {
+          Mailer.sendAcceptanceEmail(user.email)
+        }
+      });
   });
 };
 

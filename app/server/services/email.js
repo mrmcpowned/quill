@@ -194,4 +194,39 @@ controller.sendPasswordChangedEmail = function(email, callback){
 
 };
 
+/**
+ * Send an acceptance email.
+ * @param  {[type]}   email    [description]
+ * @param  {Function} callback [description]
+ */
+controller.sendAcceptanceEmail = function(email, callback){
+
+  var options = {
+    to: email,
+    subject: "["+HACKATHON_NAME+"/CONFIRM ASAP] - Guess who just got accepted (spoiler: It's you)!"
+  };
+
+  var locals = {
+    title: `You're accepted to ${HACKATHON_NAME}!`,
+    subtitle: 'Now go tell everyone else about it',
+    body: `We hope you're as excited as we are to have you at ${HACKATHON_NAME}! Just make sure you confirm `,
+    actionUrl: ROOT_URL + '/',
+    actionName: "Confirm Acceptance"
+  };
+
+  
+  sendOne('email-link-action', options, locals, function(err, info){
+    if (err){
+      console.log(err);
+    }
+    if (info){
+      console.log(info.message);
+    }
+    if (callback){
+      callback(err, info);
+    }
+  });
+
+};
+
 module.exports = controller;
