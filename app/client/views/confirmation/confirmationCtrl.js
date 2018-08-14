@@ -93,12 +93,21 @@ angular.module('reg')
                 }
               ]
             },
+            major: {
+              identifier: 'major',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your major.'
+                }
+              ]
+            },
             signatureLiability: {
               identifier: 'signatureLiabilityWaiver',
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
+                  type: 'checked',
+                  prompt: 'Please accept the liability waiver terms.'
                 }
               ]
             },
@@ -106,8 +115,8 @@ angular.module('reg')
               identifier: 'signaturePhotoRelease',
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
+                  type: 'checked',
+                  prompt: 'Please accept the photo release terms.'
                 }
               ]
             },
@@ -115,8 +124,8 @@ angular.module('reg')
               identifier: 'signatureCodeOfConduct',
               rules: [
                 {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
+                  type: 'checked',
+                  prompt: 'Please accept the MLH Code of Conduct.'
                 }
               ]
             },
@@ -127,6 +136,8 @@ angular.module('reg')
       $scope.submitForm = function(){
         if ($('.ui.form').form('is valid')){
           _updateUser();
+        } else {
+          sweetAlert("Uh oh!", "Please Fill The Required Fields", "error");
         }
       };
 

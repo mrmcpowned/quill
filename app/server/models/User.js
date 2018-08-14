@@ -69,7 +69,7 @@ var confirmation = {
 
   major: String,
   github: String,
-  twitter: String,
+  linkedin: String,
   website: String,
   resume: String,
 
@@ -85,18 +85,11 @@ var confirmation = {
   },
   receipt: String,
 
-  hostNeededFri: Boolean,
-  hostNeededSat: Boolean,
-  genderNeutral: Boolean,
-  catFriendly: Boolean,
-  smokingFriendly: Boolean,
-  hostNotes: String,
-
   notes: String,
 
-  signatureLiability: String,
-  signaturePhotoRelease: String,
-  signatureCodeOfConduct: String,
+  signatureLiability: Boolean,
+  signaturePhotoRelease: Boolean,
+  signatureCodeOfConduct: Boolean,
 };
 
 var status = {
