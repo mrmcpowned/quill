@@ -209,7 +209,7 @@ controller.sendAcceptanceEmail = function(email, callback){
   var locals = {
     title: `You're accepted to ${HACKATHON_NAME}!`,
     subtitle: 'Now go tell everyone else about it',
-    body: `We hope you're as excited as we are to have you at ${HACKATHON_NAME}! Just make sure you confirm `,
+    description: `We hope you're as excited as we are to have you at ${HACKATHON_NAME}! Just make sure you confirm `,
     actionUrl: ROOT_URL + '/',
     actionName: "Confirm Acceptance"
   };
