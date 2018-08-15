@@ -156,6 +156,15 @@ angular.module('reg')
                 }
               ]
             },
+            level: {
+              identifier: 'level',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please select a level of study.'
+                }
+              ]
+            },
             adult: {
               identifier: 'adult',
               rules: [

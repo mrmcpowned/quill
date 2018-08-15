@@ -225,6 +225,9 @@ angular.module('reg')
                 name: 'Ethnicity',
                 value: user.profile.ethnicity
               },{
+                name: 'Level of Study',
+                value: user.profile.levelOfStudy
+              },{
                 name: 'School',
                 value: user.profile.school
               },{

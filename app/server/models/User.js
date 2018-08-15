@@ -57,6 +57,13 @@ var profile = {
     enum : {
       values: 'I A B H W M N'.split(' ')
     }
+  },
+
+  levelOfStudy: {
+    type: String,
+    enum : {
+      values: 'High School,Undergaduate,Graduate'.split(',')
+    }
   }
 
 };
