@@ -106,14 +106,14 @@ function calculateStats(){
         newStats.declined += user.status.declined ? 1 : 0;
 
         // Count the number of people who need reimbursements
-        newStats.reimbursementTotal += user.confirmation.needsReimbursement ? 1 : 0;
+        newStats.reimbursementTotal += user.profile.needsReimbursement ? 1 : 0;
 
         // Count the number of people who still need to be reimbursed
-        newStats.reimbursementMissing += user.confirmation.needsReimbursement &&
+        newStats.reimbursementMissing += user.profile.needsReimbursement &&
           !user.status.reimbursementGiven ? 1 : 0;
 
         // Count the number of people who want hardware
-        newStats.wantsHardware += user.confirmation.wantsHardware ? 1 : 0;
+        newStats.wantsHardware += user.profile.wantsHardware ? 1 : 0;
 
         // Count schools
         if (!newStats.demo.schools[email]){
@@ -143,8 +143,8 @@ function calculateStats(){
         // }
 
         // Count shirt sizes
-        if (user.confirmation.shirtSize in newStats.shirtSizes){
-          newStats.shirtSizes[user.confirmation.shirtSize] += 1;
+        if (user.profile.shirtSize in newStats.shirtSizes){
+          newStats.shirtSizes[user.profile.shirtSize] += 1;
         }
 
         // Host needed counts
@@ -162,8 +162,8 @@ function calculateStats(){
           += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "N" ? 1 : 0; */
 
         // Dietary restrictions
-        if (user.confirmation.dietaryRestrictions){
-          user.confirmation.dietaryRestrictions.forEach(function(restriction){
+        if (user.profile.dietaryRestrictions){
+          user.profile.dietaryRestrictions.forEach(function(restriction){
             if (!newStats.dietaryRestrictions[restriction]){
               newStats.dietaryRestrictions[restriction] = 0;
             }

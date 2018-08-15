@@ -211,34 +211,34 @@ angular.module('reg')
                   prompt: 'You must be an adult.'
                 }
               ]
+            },
+            shirt: {
+              identifier: 'shirt',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please give us a shirt size!'
+                }
+              ]
+            },
+            phone: {
+              identifier: 'phone',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a phone number.'
+                }
+              ]
+            },
+            major: {
+              identifier: 'major',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your major.'
+                }
+              ]
             }
-          },
-          shirt: {
-            identifier: 'shirt',
-            rules: [
-              {
-                type: 'empty',
-                prompt: 'Please give us a shirt size!'
-              }
-            ]
-          },
-          phone: {
-            identifier: 'phone',
-            rules: [
-              {
-                type: 'empty',
-                prompt: 'Please enter a phone number.'
-              }
-            ]
-          },
-          major: {
-            identifier: 'major',
-            rules: [
-              {
-                type: 'empty',
-                prompt: 'Please enter your major.'
-              }
-            ]
           }
         });
       }
