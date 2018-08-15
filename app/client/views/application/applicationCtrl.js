@@ -75,7 +75,7 @@ angular.module('reg')
               title: "Awesome!",
               text: "Your application has been saved.",
               type: "success",
-              confirmButtonColor: "#e76482"
+              confirmButtonColor: "#ff1d8e"
             }, function(){
               $state.go('app.dashboard');
             });
