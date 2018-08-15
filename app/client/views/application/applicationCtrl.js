@@ -56,7 +56,7 @@ angular.module('reg')
               content.push({title: $scope.schools[i]})
             }
 
-            $('#school.ui.search')
+            $('#major.ui.search')
               .search({
                 source: content,
                 cache: true,     
@@ -64,7 +64,30 @@ angular.module('reg')
                   $scope.user.profile.school = result.title.trim();
                 }        
               })             
-          });          
+          });
+          
+          $http
+          .get('/assets/majors.csv')
+          .then(function(res){ 
+            $scope.majors = res.data.split('\n');
+            $scope.majors.push('Other');
+
+            var majorsStore = [];
+
+            for(i = 0; i < $scope.majors.length; i++) {                                          
+              $scope.majors[i] = $scope.majors[i].trim(); 
+              majorsStore.push({title: $scope.majors[i]})
+            }
+
+            $('#school.ui.search')
+              .search({
+                source: majorsStore,
+                cache: true,     
+                onSelect: function(result, response) {                                    
+                  $scope.user.profile.major = result.title.trim();
+                }        
+              })             
+          });
       }
 
       var dietaryRestrictions = {

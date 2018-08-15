@@ -224,11 +224,12 @@
 
         <div class="field">
           <label> What are you studying? (required)</label>
-          <input type="text"
-                 name="major"
-                 placeholder="Computer Science, Product Design, Basket Weaving, etc."
-                 ng-model="user.profile.major"
-                 required>
+          <div id="major" class="ui search">
+            <div class="ui input">
+              <input class="prompt" type="text" placeholder="Computer Science, Product Design, Basket Weaving, etc." name="major" ng-model="user.profile.major">                
+            </div>
+            <div class="results"></div>
+          </div>
         </div>
 
         <div class="field">
