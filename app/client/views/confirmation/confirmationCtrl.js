@@ -103,7 +103,7 @@ angular.module('reg')
               ]
             },
             signatureLiability: {
-              identifier: 'signatureLiabilityWaiver',
+              identifier: 'liability-waiver',
               rules: [
                 {
                   type: 'checked',
@@ -112,7 +112,7 @@ angular.module('reg')
               ]
             },
             signaturePhotoRelease: {
-              identifier: 'signaturePhotoRelease',
+              identifier: 'photo-release',
               rules: [
                 {
                   type: 'checked',
@@ -121,7 +121,7 @@ angular.module('reg')
               ]
             },
             signatureCodeOfConduct: {
-              identifier: 'signatureCodeOfConduct',
+              identifier: 'mlh-coc',
               rules: [
                 {
                   type: 'checked',
@@ -130,7 +130,7 @@ angular.module('reg')
               ]
             },
             signaturePrivacyPolicy: {
-              identifier: 'signaturePrivacyPolicy',
+              identifier: 'mlh-privacy',
               rules: [
                 {
                   type: 'checked',
