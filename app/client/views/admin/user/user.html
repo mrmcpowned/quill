@@ -131,6 +131,22 @@
       </div>
 
       <div class="field">
+        <label>Ethnicity</label>
+        <select
+          name="gender"
+          ng-model="selectedUser.profile.ethnicity">
+          <option value="">Ethnicity</option>
+          <option value="I">American Indian or Alaskan Native</option>
+          <option value="A">Asian / Pacific Islander</option>
+          <option value="B">Black or African American</option>
+          <option value="H">Hispanic</option>
+          <option value="W">White / Caucasian</option>
+          <option value="M">Multiple ethnicity / Other</option>
+          <option value="N">Prefer not to answer</option>
+        </select>
+      </div>
+
+      <div class="field">
         <label>I would describe myself as a...</label>
         <input type="text"
                placeholder="Beginner, Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"

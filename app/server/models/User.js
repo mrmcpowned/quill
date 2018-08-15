@@ -51,6 +51,13 @@ var profile = {
       values: 'M F O N'.split(' ')
     }
   },
+  
+  ethnicity: {
+    type: String,
+    enum : {
+      values: 'I A B H W M N'.split(' ')
+    }
+  }
 
 };
 
