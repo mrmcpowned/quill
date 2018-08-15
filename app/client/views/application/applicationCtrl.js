@@ -75,8 +75,8 @@ angular.module('reg')
         'Allergy': false
       };
 
-      if (user.confirmation.dietaryRestrictions){
-        user.confirmation.dietaryRestrictions.forEach(function(restriction){
+      if ($scope.user.profile.dietaryRestrictions){
+        $scope.user.profile.dietaryRestrictions.forEach(function(restriction){
           if (restriction in dietaryRestrictions){
             dietaryRestrictions[restriction] = true;
           }
