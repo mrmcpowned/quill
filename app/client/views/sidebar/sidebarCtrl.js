@@ -31,7 +31,7 @@ angular.module('reg')
       });
 
       $scope.goCrowdForge = function(){
-        $location.url('https://crowdforge.io/hackathons/shellhacks')
+        $location.url('https://crowdforge.io/hackathons/shellhacks');
       };
 
     }]);
