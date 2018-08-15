@@ -19,6 +19,7 @@ function calculateStats(){
       },
       schools: {},
       year: {
+        '2017': 0,
         '2018': 0,
         '2019': 0,
         '2020': 0,
