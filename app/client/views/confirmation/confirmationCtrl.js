@@ -129,6 +129,15 @@ angular.module('reg')
                 }
               ]
             },
+            signaturePrivacyPolicy: {
+              identifier: 'signaturePrivacyPolicy',
+              rules: [
+                {
+                  type: 'checked',
+                  prompt: 'Please accept the MLH Privacy policy.'
+                }
+              ]
+            }
           }
         });
       }

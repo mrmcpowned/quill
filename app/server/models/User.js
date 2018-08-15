@@ -104,6 +104,7 @@ var confirmation = {
   signatureLiability: Boolean,
   signaturePhotoRelease: Boolean,
   signatureCodeOfConduct: Boolean,
+  signaturePrivacyPolicy: Boolean
 };
 
 var status = {

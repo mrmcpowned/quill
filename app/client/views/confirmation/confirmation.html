@@ -257,7 +257,7 @@
             </p>
             <div class="ui checkbox">
               <input type="checkbox" id="liability-waiver" ng-model="user.confirmation.signatureLiability" required>
-              <label for="liability-waiver">By chceking this box, I affirm that I have read and accepted the terms of the liability waiver above, and will be 18 years or older at the time of the event.</label>
+              <label for="liability-waiver">By checking this box, I affirm that I have read and accepted the terms of the liability waiver above, and will be 18 years or older at the time of the event.</label>
             </div>
           </div>
 
@@ -275,12 +275,12 @@
             </p>
             <div class="ui checkbox">
               <input type="checkbox" id="photo-release" ng-model="user.confirmation.signaturePhotoRelease" required>
-              <label for="photo-release">By chceking this box, I affirm that I have read and accepted the terms of the photo release above.</label>
+              <label for="photo-release">By checking this box, I affirm that I have read and accepted the terms of the photo release above.</label>
             </div>
           </div>
 
           <div class="field">
-            <label> Code of Conduct (required)</label>
+            <label>MLH Code of Conduct (required)</label>
             <p>
               <a
                 target="_blank"
@@ -293,7 +293,15 @@
             </p>
             <div class="ui checkbox">
               <input type="checkbox" id="mlh-coc" ng-model="user.confirmation.signatureCodeOfConduct" required>
-              <label for="mlh-coc">By chceking this box, I affirm that I have read and will abide by the code of conduct detailed above.</label>
+              <label for="mlh-coc">By checking this box, I affirm that I have read and will abide by the code of conduct detailed above.</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>MLH Privacy Policy (required)</label>
+            <div class="ui checkbox">
+              <input type="checkbox" id="mlh-privacy" ng-model="user.confirmation.signaturePrivacyPolicy" required>
+              <label for="mlh-privacy">By checking this box, I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.</label>
             </div>
           </div>
 
