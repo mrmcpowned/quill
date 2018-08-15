@@ -101,6 +101,16 @@ angular.module('reg')
         return true;
       }
 
+      function generateAlphaCode(size) {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        
+        for (var i = 0; i < size; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+            
+        return text;
+      }
+
       function _setupForm(){
         // Custom minors validation rule
         $.fn.form.settings.rules.allowMinors = function (value) {
@@ -182,6 +192,7 @@ angular.module('reg')
 
       $scope.submitForm = function(){
         if ($('.ui.form').form('is valid')){
+          $scope.user.profile.checkincode = generateAlphaCode(6);
           _updateUser();
         }
         else{

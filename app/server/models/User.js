@@ -64,6 +64,12 @@ var profile = {
     enum : {
       values: 'High School,Undergaduate,Graduate'.split(',')
     }
+  },
+  
+  checkincode: {
+    type: String,
+    min: 6,
+    max: 6,
   }
 
 };
