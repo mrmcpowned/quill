@@ -115,6 +115,12 @@ input {
   height: 2.5em;
 }
 
+.ui.checkbox{
+  .label{
+    cursor: pointer;
+  }
+}
+
 fieldset {
   padding: 0;
   border: none;

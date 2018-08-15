@@ -28,7 +28,7 @@ angular.module('reg')
         'Vegan': false,
         'Halal': false,
         'Kosher': false,
-        'Nut Allergy': false
+        'Allergy': false
       };
 
       if (user.confirmation.dietaryRestrictions){

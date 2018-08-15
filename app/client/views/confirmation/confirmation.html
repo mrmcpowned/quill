@@ -41,8 +41,8 @@
               ng-repeat="(key, value) in dietaryRestrictions">
 
               <div class="ui checkbox">
-                <input type="checkbox" ng-model="dietaryRestrictions[key]" />
-                <label>{{key}}</label>
+                <input type="checkbox" ng-model="dietaryRestrictions[key]" id="diet-{{key}}"/>
+                <label for="diet-{{key}}">{{key}}</label>
               </div>
 
             </div>
@@ -78,8 +78,8 @@
               Will you be needing hardware?
             </label>
             <div class="ui checkbox">
-              <input type="checkbox" ng-model="user.confirmation.wantsHardware">
-              <label> Yes, I would like to use hardware in my hack. </label>
+              <input type="checkbox" ng-model="user.confirmation.wantsHardware" id="need-hardware">
+              <label for="need-hardware"> Yes, I would like to use hardware in my hack. </label>
             </div>
           </div>
 
