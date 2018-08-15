@@ -85,8 +85,6 @@ var profile = {
   major: String,
   github: String,
   linkedin: String,
-  website: String,
-  resume: String,
 
   needsReimbursement: Boolean,
   address: {
@@ -108,6 +106,7 @@ var profile = {
 var confirmation = {
 
   website: String,
+  resume: String,
 
   receipt: String,
 
