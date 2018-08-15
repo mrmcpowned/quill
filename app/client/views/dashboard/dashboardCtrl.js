@@ -10,7 +10,8 @@ angular.module('reg')
     'UserService',
     'EVENT_INFO',
     'DASHBOARD',
-    function($rootScope, $scope, $sce, currentUser, settings, Utils, AuthService, UserService, EVENT_INFO, DASHBOARD){
+    '$location',
+    function($rootScope, $scope, $sce, currentUser, settings, Utils, AuthService, UserService, EVENT_INFO, DASHBOARD, $location){
       var Settings = settings.data;
       var user = currentUser.data;
       $scope.user = user;
