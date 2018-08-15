@@ -56,7 +56,7 @@ angular.module('reg')
               content.push({title: $scope.schools[i]})
             }
 
-            $('#major.ui.search')
+            $('#school.ui.search')
               .search({
                 source: content,
                 cache: true,     
@@ -79,7 +79,7 @@ angular.module('reg')
               majorsStore.push({title: $scope.majors[i]})
             }
 
-            $('#school.ui.search')
+            $('#major.ui.search')
               .search({
                 source: majorsStore,
                 cache: true,     
