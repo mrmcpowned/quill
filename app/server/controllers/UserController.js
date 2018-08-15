@@ -650,7 +650,8 @@ UserController.admitUser = function(id, user, callback){
           callback(err, user);
         }
         else {
-          Mailer.sendAcceptanceEmail(user.email)
+          Mailer.sendAcceptanceEmail(user.email);
+          callback(err, user);
         }
       });
   });
