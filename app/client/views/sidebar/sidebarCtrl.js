@@ -7,7 +7,7 @@ angular.module('reg')
     'AuthService',
     'Session',
     'EVENT_INFO',
-    '$location'
+    '$location',
     function($rootScope, $scope, Settings, Utils, AuthService, Session, EVENT_INFO, $location){
 
       var settings = Settings.data;
