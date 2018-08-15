@@ -70,12 +70,7 @@ var profile = {
     type: String,
     min: 6,
     max: 6,
-  }
-
-};
-
-// Only after confirmed
-var confirmation = {
+  },
   phoneNumber: String,
   dietaryRestrictions: [String],
   shirtSize: {
@@ -103,9 +98,18 @@ var confirmation = {
     zip: String,
     country: String
   },
-  receipt: String,
 
   notes: String,
+
+
+};
+
+// Only after confirmed
+var confirmation = {
+
+  website: String,
+
+  receipt: String,
 
   signatureLiability: Boolean,
   signaturePhotoRelease: Boolean,
