@@ -105,8 +105,8 @@ angular.module('reg')
         });
       };
 
-      $scope.goCrowdForge = () => {
-        $location.url('https://crowdforge.io/hackathons/shellhacks');
-      };
+      // $scope.goCrowdForge = () => {
+      //   $location.url('https://crowdforge.io/hackathons/shellhacks');
+      // };
 
     }]);
