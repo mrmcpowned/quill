@@ -7,8 +7,8 @@ angular.module('reg')
     'AuthService',
     'Session',
     'EVENT_INFO',
-    '$location',
-    function($rootScope, $scope, Settings, Utils, AuthService, Session, EVENT_INFO, $location){
+    '$window',
+    function($rootScope, $scope, Settings, Utils, AuthService, Session, EVENT_INFO, $window){
 
       var settings = Settings.data;
       var user = $rootScope.currentUser;
@@ -32,7 +32,7 @@ angular.module('reg')
       });
 
       $scope.goCrowdForge = function(){
-        $location.url('https://crowdforge.io/hackathons/shellhacks');
+        $$window.location.href = 'https://crowdforge.io/hackathons/shellhacks';
       };
 
     }]);

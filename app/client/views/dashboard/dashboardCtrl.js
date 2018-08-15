@@ -10,8 +10,8 @@ angular.module('reg')
     'UserService',
     'EVENT_INFO',
     'DASHBOARD',
-    '$location',
-    function($rootScope, $scope, $sce, currentUser, settings, Utils, AuthService, UserService, EVENT_INFO, DASHBOARD, $location){
+    '$window',
+    function($rootScope, $scope, $sce, currentUser, settings, Utils, AuthService, UserService, EVENT_INFO, DASHBOARD, $window){
       var Settings = settings.data;
       var user = currentUser.data;
       $scope.user = user;
@@ -107,7 +107,7 @@ angular.module('reg')
       };
 
       $scope.goCrowdForge = function(){
-        $location.url('https://crowdforge.io/hackathons/shellhacks');
+        $$window.location.href = 'https://crowdforge.io/hackathons/shellhacks';
       };
 
     }]);
