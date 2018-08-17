@@ -1,5 +1,5 @@
 angular.module('reg')
-  .controller('SidebarCtrl', [
+  .controller('announcementCtrl', [
     'Settings',
     '$sce',
     function(Settings, $sce){
