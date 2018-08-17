@@ -2,7 +2,8 @@ angular.module('reg')
   .controller('announcementCtrl', [
     'Settings',
     '$sce',
-    function(Settings, $sce){
+    '$scope',
+    function(Settings, $sce, $scope){
 
       var Settings = Settings.data;
 
