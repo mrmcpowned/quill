@@ -118,6 +118,16 @@ angular.module('reg')
         return $sce.trustAsHtml(converter.makeHtml(text));
       };
 
+      $scope.updateAnnouncementText = function(){
+        var text = $scope.settings.announcementText;
+        SettingsService
+          .updateAnnouncementText(text)
+          .success(function(data){
+            swal("Looks good!", "Announcement Text Updated", "success");
+            updateSettings(data);
+          });
+      };
+
       $scope.updateWaitlistText = function(){
         var text = $scope.settings.waitlistText;
         SettingsService
