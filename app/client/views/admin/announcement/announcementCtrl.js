@@ -1,5 +1,5 @@
 angular.module('reg')
-  .controller('announcementCtrl', [
+  .controller('AnnouncementCtrl', [
     '$scope',
     '$sce',
     'settings',
