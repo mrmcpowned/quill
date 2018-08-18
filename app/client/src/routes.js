@@ -40,7 +40,7 @@ angular.module('reg')
               }
             }
           },
-          'announcement': {
+          'announcement@app': {
             templateUrl: "views/announcement/announcement.html",
             controller: 'announcementCtrl',
             resolve: {

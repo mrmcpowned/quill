@@ -33,7 +33,6 @@ angular.module('reg')
           text: text
         });
       },
-      },
       updateWaitlistText: function(text){
         return $http.put(base + 'waitlist', {
           text: text
