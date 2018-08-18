@@ -42,7 +42,7 @@ angular.module('reg')
           },
           'announcement@app': {
             templateUrl: "views/announcement/announcement.html",
-            controller: 'announcementCtrl',
+            controller: 'AnnouncementCtrl',
             resolve: {
               'settings' : function(SettingsService) {
                 return SettingsService.getPublicSettings();
