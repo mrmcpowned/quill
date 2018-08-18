@@ -12,6 +12,6 @@ angular.module('reg')
 
       $scope.showAnnouncement = $scope.announcementText;
 
-      console.log("announcement text", announcementText);
+      console.log("announcement text", $scope.announcementText);
       
     }]);
