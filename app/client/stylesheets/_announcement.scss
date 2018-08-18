@@ -1,0 +1,22 @@
+.announcement {
+  &.markdown {
+    margin: 1em;
+    background: $secondary;
+    width: 100%;
+    padding: 1em;
+    color: white;
+
+    a {
+      color: $quaternary;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .announcement {
+    &.markdown {
+      margin-top: 6em;
+    }
+  }
+}
