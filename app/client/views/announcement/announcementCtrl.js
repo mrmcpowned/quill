@@ -7,12 +7,9 @@ angular.module('reg')
 
       var Settings = Settings.data;
 
-      $scope.isAnnouncementEnabled = 
-        (Settings.announcementText == "" ||
-        Settings.announcementText == null,
-        Settings.announcementText == undefined) ? false : true;
-
       var converter = new showdown.Converter();
       $scope.announcementText = $sce.trustAsHtml(converter.makeHtml(Settings.announcementText));
+
+      $scope.isAnnouncementEnabled = $scope.announcementText !== "";
       
     }]);
