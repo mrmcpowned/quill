@@ -10,6 +10,8 @@ angular.module('reg')
       var converter = new showdown.Converter();
       $scope.announcementText = $sce.trustAsHtml(converter.makeHtml(Settings.announcementText));
 
-      $scope.isAnnouncementEnabled = $scope.announcementText !== "";
+      $scope.showAnnouncement = $scope.announcementText;
+
+      console.log("announcement text", announcementText);
       
     }]);
