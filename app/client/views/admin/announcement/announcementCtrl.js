@@ -1,17 +1,38 @@
 angular.module('reg')
   .controller('AnnouncementCtrl', [
+    '$rootScope',
     '$scope',
-    '$sce',
     'settings',
-    function($scope, $sce, Settings){
+    'Utils',
+    'AuthService',
+    'Session',
+    'EVENT_INFO',
+    '$window',
+    function($rootScope, $scope, Settings, Utils, AuthService, Session, EVENT_INFO, $window){
 
-      var Settings = Settings.data;
+      var settings = Settings.data;
+      var user = $rootScope.currentUser;
 
-      $scope.isAnnouncementEnabled = 
-        (Settings.announcementText == "" ||
-        Settings.announcementText == null,
-        Settings.announcementText == undefined) ? false : true;
+      $scope.EVENT_INFO = EVENT_INFO;
 
-      $scope.announcementText = $sce.trustAsHtml(converter.makeHtml(Settings.announcementText));
-      
+      $scope.pastConfirmation = Utils.isAfter(user.status.confirmBy);
+
+      $scope.logout = function(){
+        AuthService.logout();
+      };
+
+      $scope.showSidebar = false;
+      $scope.toggleSidebar = function(){
+        $scope.showSidebar = !$scope.showSidebar;
+      };
+
+      // oh god jQuery hack
+      $('.item').on('click', function(){
+        $scope.showSidebar = false;
+      });
+
+      $scope.goCrowdForge = function(){
+        $window.open('https://crowdforge.io/hackathons/shellhacks', '_blank');
+      };
+
     }]);
