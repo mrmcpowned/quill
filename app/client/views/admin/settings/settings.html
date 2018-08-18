@@ -140,6 +140,42 @@ class="ui green segment">
   ng-class="{'loading': loading}"
   class="ui blue segment">
   <div class="ui header">
+    Announcement Text
+  </div>
+  <div class="ui stackable two column grid">
+    <div class="column">
+      <div class="ui form">
+        <div class="field">
+          <textarea
+            class="ui input"
+            type="text"
+            ng-model="settings.announcementText">
+          </textarea>
+        </div>
+        <div class="field">
+          <div
+            class="ui green button"
+            ng-click="updateAnnouncementText()">
+            Update
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="preview ui segment"
+        ng-bind-html="markdownPreview(settings.announcementText)">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Waitlist Text Editor -->
+<div
+  ng-class="{'loading': loading}"
+  class="ui blue segment">
+  <div class="ui header">
     Waitlist Text
   </div>
   <div class="ui stackable two column grid">

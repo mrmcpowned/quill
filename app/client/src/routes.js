@@ -39,7 +39,15 @@ angular.module('reg')
                 return SettingsService.getPublicSettings();
               }
             }
-
+          },
+          'announcement@app': {
+            templateUrl: "views/announcement/announcement.html",
+            controller: 'AnnouncementCtrl',
+            resolve: {
+              'settings' : function(SettingsService) {
+                return SettingsService.getPublicSettings();
+              }
+            }
           }
         },
         data: {

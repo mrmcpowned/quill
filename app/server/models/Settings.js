@@ -28,6 +28,9 @@ var schema = new mongoose.Schema({
     select: false,
     default: ['.edu'],
   },
+  announcementText: {
+    type: String
+  },
   waitlistText: {
     type: String
   },

@@ -28,6 +28,11 @@ angular.module('reg')
           emails: emails
         });
       },
+      updateAnnouncementText: function(text){
+        return $http.put(base + 'announcement', {
+          text: text
+        });
+      },
       updateWaitlistText: function(text){
         return $http.put(base + 'waitlist', {
           text: text

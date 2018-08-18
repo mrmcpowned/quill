@@ -301,6 +301,7 @@ module.exports = function(router) {
    *   timeClose: Number,
    *   timeToConfirm: Number,
    *   acceptanceText: String,
+   *   announcementText: String,
    *   confirmationText: String,
    *   allowMinors: Boolean
    * }
@@ -309,6 +310,17 @@ module.exports = function(router) {
     SettingsController.getPublicSettings(defaultResponse(req, res));
   });
 
+  /**
+   * Update the announcement text.
+   * body: {
+   *   text: String
+   * }
+   */
+  router.put('/settings/announcement', isAdmin, function(req, res){
+    var text = req.body.text;
+    SettingsController.updateField('announcementText', text, defaultResponse(req, res));
+  });
+  
   /**
    * Update the acceptance text.
    * body: {
