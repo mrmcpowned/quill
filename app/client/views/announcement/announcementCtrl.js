@@ -10,8 +10,6 @@ angular.module('reg')
       var converter = new showdown.Converter();
       $scope.announcementText = $sce.trustAsHtml(converter.makeHtml(Settings.announcementText));
 
-      $scope.showAnnouncement = typeof $scope.announcementText === 'b';
-
-      console.log("announcement text", typeof $scope.announcementText);
+      $scope.showAnnouncement = typeof $scope.announcementText === 'object';
       
     }]);
