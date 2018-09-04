@@ -267,8 +267,11 @@
         <br>
 
         <div class="divided title">Travel</div>
-
+        
+        
         <div class="field">
+          <h2>As of Tuesday, September 14, we are not accepting any further requests for reimbursement.</h2>
+          <s>
           <p>
             As a reminder, our reimbursement policy is as follows:
           </p>
@@ -278,12 +281,10 @@
             <li> All cars must be filled with a minimum of 4 passengers </li>
             <li> All passengers must be attending the hackathon </li>
           </ul>
-          <p>
-            We’ll also be sending buses to select Florida schools so keep an eye out on your emails!
-          </p>
+          </s>
         </div>
 
-        <div class="field">
+        <div class="field" ng-show="user.profile.needsReimbursement">
           <label> Will you be needing travel reimbursement? </label>
           <div class="ui checkbox">
             <input type="checkbox" id="travel-reimbursement" ng-model="user.profile.needsReimbursement">
